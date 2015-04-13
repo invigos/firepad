@@ -1,0 +1,22 @@
+.firepad-editor-container {
+	position: absolute;
+	top: 83px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: auto;
+	overflow: auto;
+	background: rgb(234,234,234);
+	padding-top: 15px;
+}
+
+.firepad-editor-container .CodeMirror {
+	position: static;
+	width: 600px;
+	min-height: 400px;
+	margin: 0 auto;
+}
+
+.firepad-toolbar {
+	text-align: center;
+}
