@@ -11,6 +11,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.5.0/codemirror.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.5.0/codemirror.css" />
 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
   <!-- Firepad -->
   <link rel="stylesheet" href="../dist/firepad.css" />
   <link rel="stylesheet" href="invigos.css" />
@@ -43,7 +45,11 @@
 
       //// Create Firepad (with rich text toolbar and shortcuts enabled).
       var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror,
-          { richTextToolbar: true, richTextShortcuts: true });
+          { 
+            richTextToolbar: true, 
+            toolbarItems: [ 'zoom', 'history', 'fontstyle', 'clipboard', 'lists', 'align' ], 
+            richTextShortcuts: true 
+          });
 
       //// Initialize contents.
       firepad.on('ready', function() {
