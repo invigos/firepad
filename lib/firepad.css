@@ -273,7 +273,7 @@ a.firepad-btn:active {
   font-style: normal;
 }*/
 
-.firepad-tb-cut, .firepad-tb-copy, .firepad-tb-paste,
+.firepad-tb-cut, .firepad-tb-copy, .firepad-tb-paste, .firepad-tb-search,
 .firepad-tb-bold, .firepad-tb-italic, .firepad-tb-underline, .firepad-tb-strikethrough, .firepad-tb-list, .firepad-tb-list-2, .firepad-tb-numbered-list, .firepad-tb-paragraph-left, .firepad-tb-paragraph-center, .firepad-tb-paragraph-right, .firepad-tb-paragraph-justify, .firepad-tb-menu, .firepad-tb-link, .firepad-tb-undo, .firepad-tb-redo, .firepad-tb-box-add, .firepad-tb-box-remove, .firepad-tb-print, .firepad-tb-indent-decrease, .firepad-tb-indent-increase, .firepad-tb-insert-image, .firepad-tb-bubble {
   font-family: FontAwesome;
 }
@@ -352,4 +352,7 @@ a.firepad-btn:active {
 }
 .firepad-tb-paste:before {
   content: "\f0ea";
+}
+.firepad-tb-search:before {
+  content: "\f002";
 }
