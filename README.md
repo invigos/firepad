@@ -7,6 +7,27 @@
 [Firepad](http://www.firepad.io/) is an open-source, collaborative code and text editor. It is
 designed to be embedded inside larger web applications.
 
+### How to compile this project
+
+This project is using some cool libraries for compiling, is called Grunt. Grunt is a well known javascript task runner that is commonly used for handling the minification, obfuscation, etc of a javascript based project. The way its used (in a very basic way) is running the command:
+
+```bash
+$ grunt watch
+```
+And this will be listening for any changes on the javascript and compiling in "real time".
+
+For our jenkins we need to have this command line:
+```bash
+$ grunt build
+```
+And this will make the changes to the files:
+
+* `dist/` - Compiled (built) files directory
+    * `firepad.js` - non minified file (normally we use this one on invigos for sencha cmd to build it)
+    * `firepad.min.js` - this is the minified file
+    * `firepad.css` - css file for the editor
+
+
 ## Live Demo
 
 Visit [firepad.io](http://demo.firepad.io/) to see a live demo of Firepad in rich text mode, or the
@@ -47,6 +68,15 @@ Firepad supports rich text editing with [CodeMirror](http://codemirror.net/) and
 [ACE](http://ace.c9.io/). Check out the detailed setup instructions at [firepad.io/docs](http://www.firepad.io/docs).
 
 ### What's Here
+
+
+### Invigos examples
+
+I created a couple of files so we can have some playground with the editor changes, some of them are only for invigos, others are global for the editor. 
+
+* `examples/` - This has all the examples made by the firepad people (some of them are awesome)
+    * `invigos.html` - this is the file that you can run to check the changes (some configs are there as well)
+    * `invigos.css` - this is just a dumb css file with some non-important styles
 
 Here are some highlights of the directory structure and notable source files:
 
