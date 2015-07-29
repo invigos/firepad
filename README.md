@@ -7,44 +7,36 @@
 [Firepad](http://www.firepad.io/) is an open-source, collaborative code and text editor. It is
 designed to be embedded inside larger web applications. 
 
-## Live Demo
 
-Visit [firepad.io](http://demo.firepad.io/) to see a live demo of Firepad in rich text mode, or the
-[examples page](http://www.firepad.io/examples/) to see it setup for collaborative code editing.
+### How to compile this project
 
-[![a screenshot of demo.firepad.io including a picture of two cats and a discussion about fonts](screenshot.png)](http://demo.firepad.io/)
+This project is using some cool libraries for compiling, is called Grunt. Grunt is a well known javascript task runner that is commonly used for handling the minification, obfuscation, etc of a javascript based project. The way its used (in a very basic way) is running the command:
 
-## Setup
-Firepad uses [Firebase](https://www.firebase.com/?utm_source=firepad) as a backend, so it requires no server-side
-code. It can be added to any web app by including a few JavaScript files
-
-```HTML
-<!-- Firebase -->
-<script src="https://cdn.firebase.com/js/client/2.0.2/firebase.js"></script>
-
-<!-- CodeMirror -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/codemirror.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.3.0/codemirror.css"/>
-
-<!-- Firepad -->
-<link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.1.0/firepad.css" />
-<script src="https://cdn.firebase.com/libs/firepad/1.1.0/firepad.min.js"></script>
+```bash
+$ grunt watch
 ```
+And this will be listening for any changes on the javascript and compiling in "real time".
 
-and calling an init function.
-
-```HTML
-<div id="firepad"></div>
-<script>
-  var firepadRef = new Firebase('<FIREBASE URL>');
-  var codeMirror = CodeMirror(document.getElementById('firepad'), { lineWrapping: true });
-  var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror,
-      { richTextShortcuts: true, richTextToolbar: true, defaultText: 'Hello, World!' });
-</script>
+For our jenkins we need to have this command line:
+```bash
+$ grunt build
 ```
-    
-Firepad supports rich text editing with [CodeMirror](http://codemirror.net/) and code editing via 
-[ACE](http://ace.c9.io/). Check out the detailed setup instructions at [firepad.io/docs](http://www.firepad.io/docs).
+And this will make the changes to the files:
+
+* `dist/` - Compiled (built) files directory
+    * `firepad.js` - non minified file (normally we use this one on invigos for sencha cmd to build it)
+    * `firepad.min.js` - this is the minified file
+    * `firepad.css` - css file for the editor
+
+
+### Invigos examples
+
+I created a couple of files so we can have some playground with the editor changes, some of them are only for invigos, others are global for the editor. 
+
+* `examples/` - This has all the examples made by the firepad people (some of them are awesome)
+    * `invigos.html` - this is the file that you can run to check the changes (some configs are there as well)
+    * `invigos.css` - this is just a dumb css file with some non-important styles
+
 
 ### What's Here
 
@@ -85,14 +77,4 @@ source files when a change occurs. The output files are written to the `/dist/` 
 
 You can run the test suite by navigating to `file:///path/to/firepad/tests/index.html` or via the
 command line using `grunt test`.
-
-## Getting Started with Firebase
-
-Firepad requires Firebase in order to store data. You can
-[sign up here](https://www.firebase.com/signup/?utm_source=firepad) for a free account.
-
-## Getting Help
-
-Join our [Firepad Google Group](https://groups.google.com/forum/#!forum/firepad-io) to ask
-questions, request features, or share your Firepad apps with the community.
 
