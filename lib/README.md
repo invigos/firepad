@@ -1,4 +1,4 @@
-### Configuration Changes
+# Configuration Changes
 
 Theres a file in this level that is called rich-text-toolbar.js. This file has most of the modifications made for the toolbar but one of the main changes is the modification of the way the toolbar is configured. The idea here is to make the toolbar customizable for the developers (we needed this!). So this is an example on how we configure the toolbar now:
 
@@ -44,6 +44,27 @@ The toolbar buttons available are the next ones:
 * `search` - this only ads the magnifier button and the 'search' event to the editor. The functionality of this button needs to be outside of the library.
 * `link` - this only ads the hiperlink button and the 'link' event to the editor. The functionality of this button needs to be outside of the library.
 * `import` - this only ads the import button and the 'import' event to the editor. The functionality of this button needs to be outside of the library.
+
+
+#Stylesheets
+
+Ok, so for the styling firepad has one css file `firepad.css` that you can find in this folder level. This file has some changes in the bottom. Basically the idea was to change the custom icons that firepad uses to use FontAwesome. The reason is because firepad uses some custom made font icons generated with iconmoon (if I'm not mistaken) and that font icons were a little poor on content. To add more buttons and more tools to the toolbar I changed this. So remember to add `Font Awesome` to the project that uses this editor. In case we want to add a new button we have to add the css for the button, for example: 
+
+```
+/* THIS CAN BE ADDED TO THE LINE 276 */
+.firepad-tb-import {
+  font-family: FontAwesome;
+}
+
+.firepad-tb-import:before {
+  content: "\f019";
+}
+
+```
+
+
+
+
 
 
 
