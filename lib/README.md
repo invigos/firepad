@@ -38,7 +38,7 @@ The toolbar buttons available are the next ones:
 * `history` - Undo and Redo buttons (firebase history based).
 * `image` - this pops up a textfield where you can add a url for an image and it will add it to the editor.
 
-#Specific Invigos buttons we have:
+###Specific Invigos buttons we have:
 
 * `swedish_format` - this has a list in swedish for paragraph format styles: Vanlig text, Titel, Rubrik 1, 2, 3, 4. 
 * `search` - this only ads the magnifier button and the 'search' event to the editor. The functionality of this button needs to be outside of the library.
