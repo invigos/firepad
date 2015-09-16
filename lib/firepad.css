@@ -75,6 +75,9 @@
 .firepad-la-center { text-align: center; }
 .firepad-la-right { text-align: right; }
 
+
+.firepad-comment { background-color: lightblue; } 
+
 /** Line Styles */
 pre.firepad-lt-o, pre.firepad-lt-u, pre.firepad-lt-t, pre.firepad-lt-tc {
   padding-left: 40px;
