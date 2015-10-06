@@ -277,7 +277,7 @@ a.firepad-btn:active {
 }*/
 
 .firepad-tb-cut, .firepad-tb-copy, .firepad-tb-paste, .firepad-tb-search, .firepad-tb-import,
-.firepad-tb-bold, .firepad-tb-italic, .firepad-tb-underline, .firepad-tb-strikethrough, .firepad-tb-list, .firepad-tb-list-2, .firepad-tb-numbered-list, .firepad-tb-paragraph-left, .firepad-tb-paragraph-center, .firepad-tb-paragraph-right, .firepad-tb-paragraph-justify, .firepad-tb-menu, .firepad-tb-link, .firepad-tb-undo, .firepad-tb-redo, .firepad-tb-box-add, .firepad-tb-box-remove, .firepad-tb-print, .firepad-tb-indent-decrease, .firepad-tb-indent-increase, .firepad-tb-insert-image, .firepad-tb-bubble {
+.firepad-tb-bold, .firepad-tb-italic, .firepad-tb-underline, .firepad-tb-strikethrough, .firepad-tb-list, .firepad-tb-list-2, .firepad-tb-numbered-list, .firepad-tb-paragraph-left, .firepad-tb-paragraph-center, .firepad-tb-paragraph-right, .firepad-tb-paragraph-justify, .firepad-tb-menu, .firepad-tb-link, .firepad-tb-undo, .firepad-tb-redo, .firepad-tb-box-add, .firepad-tb-box-remove, .firepad-tb-print, .firepad-tb-indent-decrease, .firepad-tb-indent-increase, .firepad-tb-insert-image, .firepad-tb-bubble, .firepad-tb-add_quickmark {
   font-family: FontAwesome;
 }
 .firepad-tb-bold:before {
@@ -362,6 +362,10 @@ a.firepad-btn:active {
 .firepad-tb-import:before {
   content: "\f019";
 }
+.firepad-tb-add_quickmark:before {
+    content: "\f075";
+}
+
 
 
 .firepad-fs-16-01px {
