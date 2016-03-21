@@ -77,4 +77,3 @@ source files when a change occurs. The output files are written to the `/dist/` 
 
 You can run the test suite by navigating to `file:///path/to/firepad/tests/index.html` or via the
 command line using `grunt test`.
-
