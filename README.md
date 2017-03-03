@@ -123,31 +123,44 @@ Here are some highlights of the directory structure and notable source files:
       presence, etc.).
 * `test/` - Jasmine tests for Firepad (many of these were borrowed from ot.js).
 
+---
+
+### Invigos
+
+#### Examples
+
+I created a couple of files so we can have some playground with the editor changes, some of them are only for invigos, others are global for the editor. 
+
+* `examples/` - This has all the examples made by the firepad people (some of them are awesome)
+    * `invigos.html` - this is the file that you can run to check the changes (some configs are there as well)
+    * `invigos.css` - this is just a dumb css file with some non-important styles
+
+#### Working locally and debugging
+
+Usually you don't need manually handle building of firepad, but if you want to debug something locally you may need to do that.
+
+Set INVIGOS_PATH var to where you storing project
+e.g. `INVIGOS_PATH='/home/alukin/proj/Invigos/E6Invigos'`
+(on Linux it can be saved inside `~/.profile` so you don't need to re-type it each time)
+
+after that you can use `npm run deploy` to build and deploy resulting firepad lib into your webapp folder
+
 ### How to compile this project
- 
+
 This project is using some cool libraries for compiling, is called Grunt. Grunt is a well known javascript task runner that is commonly used for handling the minification, obfuscation, etc of a javascript based project. The way its used (in a very basic way) is running the command:
- 
+
 ```bash
 $ grunt watch
 ```
 And this will be listening for any changes on the javascript and compiling in "real time".
- 
+
 For our jenkins we need to have this command line:
 ```bash
 $ grunt build
 ```
 And this will make the changes to the files:
- 
+
 * `dist/` - Compiled (built) files directory
     * `firepad.js` - non minified file (normally we use this one on invigos for sencha cmd to build it)
     * `firepad.min.js` - this is the minified file
     * `firepad.css` - css file for the editor
- 
- ### Invigos examples
- 
-I created a couple of files so we can have some playground with the editor changes, some of them are only for invigos, others are global for the editor. 
- 
-* `examples/` - This has all the examples made by the firepad people (some of them are awesome)
-    * `invigos.html` - this is the file that you can run to check the changes (some configs are there as well)
-    * `invigos.css` - this is just a dumb css file with some non-important styles
- 
