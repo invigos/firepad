@@ -67,18 +67,13 @@ and calling an init function.
 Firepad supports rich text editing with [CodeMirror](http://codemirror.net/) and code editing via
 [ACE](http://ace.c9.io/). Check out the detailed setup instructions at [firepad.io/docs](http://www.firepad.io/docs).
 
-### What's Here
+---
 
+### Invigos
 
-### Invigos examples
+#### Examples
 
-Set INVIGOS_PATH var to where you storing project
-`INVIGOS_PATH='/home/alukin/proj/Invigos/E6Invigos'`
-(on Linux it can be saved inside `~/.profile` so you don't need to re-type it each time)
-
-after that you can use `npm run deploy` to deploy built script into your webapp folder
-
-I created a couple of files so we can have some playground with the editor changes, some of them are only for invigos, others are global for the editor. 
+I created a couple of files so we can have some playground with the editor changes, some of them are only for invigos, others are global for the editor.
 
 * `examples/` - This has all the examples made by the firepad people (some of them are awesome)
     * `invigos.html` - this is the file that you can run to check the changes (some configs are there as well)
@@ -101,6 +96,18 @@ Here are some highlights of the directory structure and notable source files:
     * `firebase-adapter.js` - Handles integration with Firebase (appending operations, triggering retries,
       presence, etc.).
 * `test/` - Jasmine tests for Firepad (many of these were borrowed from ot.js).
+
+#### Working locally and debugging
+
+Usually you don't need manually handle building of firepad, but if you want to debug something locally you may need to do that.
+
+Set INVIGOS_PATH var to where you storing project
+e.g. `INVIGOS_PATH='/home/alukin/proj/Invigos/E6Invigos'`
+(on Linux it can be saved inside `~/.profile` so you don't need to re-type it each time)
+
+after that you can use `npm run deploy` to build and deploy resulting firepad lib into your webapp folder
+
+---
 
 ## Contributing
 
