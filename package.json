@@ -66,6 +66,7 @@
     "test": "grunt test",
     "travis": "grunt",
     "dev": "grunt watch",
-    "build": "grunt build"
+    "build": "grunt build",
+    "deploy": "grunt build && cp dist/firepad.js $INVIGOS_PATH/app/lib/custom/firepad.js"
   }
 }
