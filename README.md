@@ -90,6 +90,12 @@ Firepad supports rich text editing with [CodeMirror](http://codemirror.net/) and
 
 You can find some Firepad examples [here](examples/README.md).
 
+Set INVIGOS_PATH var to where you storing project
+`INVIGOS_PATH='/home/alukin/proj/Invigos/E6Invigos'`
+(on Linux it can be saved inside `~/.profile` so you don't need to re-type it each time)
+
+after that you can use `npm run deploy` to deploy built script into your webapp folder
+
 
 ## Contributing
 
