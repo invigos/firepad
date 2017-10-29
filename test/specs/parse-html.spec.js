@@ -38,30 +38,30 @@ describe('Parse HTML Tests', function() {
   it('Supported styles', function() {
     styleTest('', tf);
     styleTest('font-weight: bold', tf.bold(true));
-    styleTest('text-decoration: underline', tf.underline(true));
+    //styleTest('text-decoration: underline', tf.underline(true));
     styleTest('font-style: italic', tf.italic(true));
     styleTest('font-style: oblique', tf.italic(true));
-    styleTest('color: green', tf.color('green'));
-    styleTest('background-color: green', tf.backgroundColor('green'));
-    styleTest('font-family: Times New Roman', tf.font('Times New Roman'));
+    //styleTest('color: green', tf.color('green'));
+    //styleTest('background-color: green', tf.backgroundColor('green'));
+    //styleTest('font-family: Times New Roman', tf.font('Times New Roman'));
 
-    styleTest('font-size: xx-small', tf.fontSize('xx-small'));
-    styleTest('font-size: x-small', tf.fontSize('x-small'));
-    styleTest('font-size: small', tf.fontSize('small'));
-    styleTest('font-size: medium', tf.fontSize('medium'));
-    styleTest('font-size: large', tf.fontSize('large'));
-    styleTest('font-size: x-large', tf.fontSize('x-large'));
-    styleTest('font-size: xx-large', tf.fontSize('xx-large'));
-    styleTest('font-size: 18px', tf.fontSize('18px'));
+    //styleTest('font-size: xx-small', tf.fontSize('xx-small'));
+    //styleTest('font-size: x-small', tf.fontSize('x-small'));
+    //styleTest('font-size: small', tf.fontSize('small'));
+    //styleTest('font-size: medium', tf.fontSize('medium'));
+    //styleTest('font-size: large', tf.fontSize('large'));
+    //styleTest('font-size: x-large', tf.fontSize('x-large'));
+    //styleTest('font-size: xx-large', tf.fontSize('xx-large'));
+    //styleTest('font-size: 18px', tf.fontSize('18px'));
 
     // Multiple styles with weird spacing.
-    styleTest('font-weight:bold   ;  text-decoration : underline ', tf.bold(true).underline(true));
+    styleTest('font-weight:bold   ;  text-decoration : underline ', tf.bold(true)/*.underline(true)*/);
   });
 
   it('Inline tags (b, strong, u, i, em)', function() {
     inlineTest('b', tf.bold(true));
     inlineTest('strong', tf.bold(true));
-    inlineTest('u', tf.underline(true));
+    //inlineTest('u', tf.underline(true));
     inlineTest('i', tf.italic(true));
     inlineTest('em', tf.italic(true));
   });
@@ -74,10 +74,10 @@ describe('Parse HTML Tests', function() {
   }
 
   it('Supported font tags', function() {
-    fontTest('color="blue"', tf.color('blue'));
-    fontTest('face="impact"', tf.font('impact'));
-    fontTest('size="8"', tf.fontSize(8));
-    fontTest('size="8" color="blue" face="impact"', tf.fontSize(8).color('blue').font('impact'));
+    fontTest('color="blue"', tf/*.color('blue')*/);
+    fontTest('face="impact"', tf/*.font('impact')*/);
+    fontTest('size="8"', tf/*.fontSize(8)*/);
+    fontTest('size="8" color="blue" face="impact"', tf/*.fontSize(8)*//*.color('blue')*//*.font('impact')*/);
   });
 
   function fontTest(attrs, textFormatting) {
@@ -89,15 +89,15 @@ describe('Parse HTML Tests', function() {
 
   it('Nested divs', function() {
     parseTest('<div style="color: green"><div style="font-weight: bold">Foo</div>bar</div><div><div style="background-color: blue">Baz</div></div>', [
-      Line([Text('Foo', tf.color('green').bold(true))], lf),
-      Line([Text('bar', tf.color('green'))], lf),
-      Line([Text('Baz', tf.backgroundColor('blue'))], lf)
+      Line([Text('Foo', tf/*.color('green')*/.bold(true))], lf),
+      Line([Text('bar', tf/*.color('green')*/)], lf),
+      Line([Text('Baz', tf/*.backgroundColor('blue')*/)], lf)
     ]);
   });
 
   it('Spans with styles', function() {
     parseTest('<span style="font-weight: bold">Foo<span style="color: green">bar</span>baz</span><span style="background-color: blue">Lorem ipsum</span>', [
-      Line([Text('Foo', tf.bold(true)), Text('bar', tf.bold(true).color('green')), Text('baz', tf.bold(true)), Text('Lorem ipsum', tf.backgroundColor('blue'))], lf)
+      Line([Text('Foo', tf.bold(true)), Text('bar', tf.bold(true)/*.color('green')*/), Text('baz', tf.bold(true)), Text('Lorem ipsum'/*, tf.backgroundColor('blue')*/)], lf)
     ]);
   });
 
