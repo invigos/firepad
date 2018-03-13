@@ -280,11 +280,18 @@ a.firepad-btn:active {
 .firepad-tb-bold, .firepad-tb-italic, .firepad-tb-underline, .firepad-tb-strikethrough, .firepad-tb-list, .firepad-tb-list-2, .firepad-tb-numbered-list, .firepad-tb-paragraph-left, .firepad-tb-paragraph-center, .firepad-tb-paragraph-right, .firepad-tb-paragraph-justify, .firepad-tb-menu, .firepad-tb-link, .firepad-tb-undo, .firepad-tb-redo, .firepad-tb-box-add, .firepad-tb-box-remove, .firepad-tb-print, .firepad-tb-indent-decrease, .firepad-tb-indent-increase, .firepad-tb-insert-image, .firepad-tb-bubble, .firepad-tb-add_quickmark,.firepad-tb-filter_quickmark {
   font-family: FontAwesome;
 }
+.firepad-tb-langchecker {
+  font-family: "Material Design Icons";
+  font-size: 1.3em;
+}
 .firepad-tb-bold:before {
   content: "\f032";
 }
 .firepad-tb-italic:before {
   content: "\f033";
+}
+.firepad-tb-langchecker:before {
+  content: "\f4c6";
 }
 .firepad-tb-underline:before {
   content: "\f0cd";
